@@ -1,6 +1,5 @@
 import chess
 import numpy as np
-fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
 def board_to_tensor(fen):
     board = chess.Board(fen)
@@ -17,5 +16,3 @@ def board_to_tensor(fen):
     
     return tensor
 
-tensor = board_to_tensor(fen)
-print(tensor)
