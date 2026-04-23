@@ -8,7 +8,7 @@ from model import ChessCNN
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 model = ChessCNN().to(device)
-model.load_state_dict(torch.load('chess_cnn_epoch3.pt', map_location=device))
+model.load_state_dict(torch.load('chess_cnn_best.pt', map_location=device))
 model.eval()
 
 test_dataset = ChessDataset('test.csv')
